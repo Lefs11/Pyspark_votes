@@ -10,7 +10,7 @@ pipeline {
               steps {
                   withAWS(region:'us-east-1',credentials:'Jenkins_AWS') {
                   echo 'Uploading content with AWS creds'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'outlier_week.py', bucket:'big-data-oct-2022-lf')
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'outlier_week.py', bucket:'big-data-oct-2022-lf/big-data-test/')
                   }
               }
          }
